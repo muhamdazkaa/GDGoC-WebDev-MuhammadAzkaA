@@ -1,14 +1,24 @@
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+const themeBtn = document.getElementById('theme-toggle');
+const regForm = document.getElementById('regForm');
+const phoneInput = document.getElementById('phone');
+const successMsg = document.getElementById('success-msg');
 
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+});
 
-    if (body.classList.contains('dark-theme')) {
-        themeToggle.textContent = 'Mode Terang';
-    } else {
-        themeToggle.textContent = 'Mode Gelap';
+regForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const phoneValue = phoneInput.value;
+
+    if (!/^\d+$/.test(phoneValue)) {
+        alert("Nomor telepon hanya boleh berisi angka!");
+        return;
     }
-    
-    console.log("Tema berhasil diubah!");
+
+    successMsg.classList.remove('hidden');
+    regForm.style.display = 'none'; 
+
+    console.log("Data Terkirim!");
 });
