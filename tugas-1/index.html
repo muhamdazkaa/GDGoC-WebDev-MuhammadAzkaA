@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Growtopia Discovery 2026</title>
+    <title>Event Registration</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">Growtopia Discovery</div>
-        <nav>
-            <button id="theme-toggle">Ubah Mode</button>
+    <header>
+        <nav class="navbar">
+            <span class="brand">StarQuest 2026</span>
+            <button id="theme-toggle">🌓 Mode</button>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Selamat Datang di Growtopia Discovery</h1>
-            <p>Jelajahi dunia Growtopia dan temukan keajaiban di setiap sudutnya.</p>
-        </section>
+    <main class="main-content">
+        <div class="form-container">
+            <h2>Event Registration</h2>
+            
+            <form id="regForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="nama" placeholder="Enter your name" required>
+                </div>
 
-        <section class="info-container">
-            <div class="info-card">
-                <h3>Farming</h3>
-                <p>Tumbuhkan pohon lalu panen buahnya.</p>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-flex">
+                        <label><input type="radio" name="gender" value="Male" required> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <div class="phone-box">
+                        <span class="prefix">+62</span>
+                        <input type="tel" id="phone" placeholder="812345678" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-register">Register</button>
+            </form>
+
+            <div id="success-msg" class="hidden">
+                ✅ Registrasi Berhasil Disimpan!
             </div>
-            <div class="info-card">
-                <h3>Trading</h3>
-                <p>Barter dengan teman untuk mendapatkan barang yang diinginkan.</p>
-            </div>
-            <div class="info-card">
-                <h3>Building</h3>
-                <p>Membangun istana dan taman di dunia Growtopia.</p>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Growtopia Discovery. Dibuat dengan antusiasme farming.</p>
+        <p>&copy; 2026 Registration Portal. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
